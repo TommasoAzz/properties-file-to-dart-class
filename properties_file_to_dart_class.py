@@ -19,7 +19,7 @@ def extract_information_from_row(row: str):
         print(f"Row with content:\n{row}\nis not in the specified format.")
         return constant.WRONG_INPUT,constant.WRONG_INPUT
     items = row.split("=")
-    return items[0].strip(), items[1].strip()
+    return items[0].replace(" ", "").strip(), items[1].strip()
 
 # Given a file name (with single extension), a list of keys (ordered like in the file in which they came from), a list of values (ordered like in the file in which they came from),
 # creates the content string to write to write to the output file later.
