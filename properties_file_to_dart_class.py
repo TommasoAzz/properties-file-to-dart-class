@@ -58,7 +58,7 @@ def return_spaces(number: int):
 def write_content_to_file(file_name: str, content: str):
     template = Template("$fn.dart")
     new_file = open(template.substitute(fn=file_name), "w")
-    new_file.write(class_content)
+    new_file.write(content)
     new_file.close()
 
 # Main function definition
